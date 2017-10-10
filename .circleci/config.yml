@@ -44,3 +44,11 @@ jobs:
 
       # run build!
       - run: npm run build
+
+      # run deploy!
+      - deploy:
+          name: Deploy Master to Firebase
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+            fi
