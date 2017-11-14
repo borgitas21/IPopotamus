@@ -1,0 +1,32 @@
+@import "./variables"
+@import "../../../node_modules/bulma/sass/utilities/mixins" 
+
+  
+$control-height: 3em
+$control-horizontal-padding: 1em
+$control-vertical-padding: $control-horizontal-padding/2
+
+input[type="text"], input[type="email"], input[type="password"]
+  background-color: $white-ter
+  border-color: $white-ter
+  box-shadow: none
+  outline: none
+  height: $control-height
+
+  padding-bottom: $control-vertical-padding
+  padding-left: $control-horizontal-padding
+  padding-right: $control-horizontal-padding
+  padding-top: $control-vertical-padding
+  &:focus, &:hover
+    border-color: $white-ter
+    box-shadow: inherit
+
+  &.is-danger
+    background-color: lighten($danger, 8%)
+    border-color: lighten($danger, 8%)
+
+.button
+  padding-left: $control-horizontal-padding
+  padding-right: $control-horizontal-padding
+  height: $control-height
+
