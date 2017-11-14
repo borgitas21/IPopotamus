@@ -15,3 +15,6 @@
 /test/unit/coverage
 
 selenium-debug.log
+
+# Ignore env
+.env
